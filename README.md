@@ -1,7 +1,8 @@
 # Lid-driven-cavity-FENE-P
 
-&emsp; This program solves the continuity, incompressible Cauchy momentum equations, and the Oldroyd-B viscoelastic fluid model in 2D, 
-using the log-conformation method, given by
+&emsp; This program solves the continuity, incompressible Cauchy momentum equations, and the log-conforation formualation of the FENE-P viscoelastic fluid model in 2D, given by
+
+$$ \nabla{\partial u}{\partial x} + \frac{\partial v}{\partial y} = 0, $$
 
 $$ \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} = 0, $$
 
