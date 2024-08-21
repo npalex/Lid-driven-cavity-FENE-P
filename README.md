@@ -1,6 +1,6 @@
 # **Lid-driven cavity flow of an incompressible FENE-P fluid**
 
-&emsp; This program solves the continuity, incompressible Cauchy momentum equations, and the log-conforation formualation of the FENE-P viscoelastic fluid model in 2D, given by
+&emsp; This program solves the continuity, incompressible Cauchy momentum equations, and the log-conforation formulation of the FENE-P viscoelastic fluid model in 2D, given by
 
 $$ \nabla \cdot  \underline{u} = 0, $$
 
