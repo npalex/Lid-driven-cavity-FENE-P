@@ -2,7 +2,7 @@
 
 &emsp; This program solves the continuity, incompressible Cauchy momentum equations, and the log-conforation formualation of the FENE-P viscoelastic fluid model in 2D, given by
 
-$$ \nabla \dot  \textbf{u} = 0, $$
+$$ \nabla \cdot  \textbf{u} = 0, $$
 
 $$ \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} = 0, $$
 
