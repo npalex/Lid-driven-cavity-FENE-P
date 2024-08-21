@@ -4,6 +4,8 @@
 
 $$ \nabla \cdot  \textbf{u} = 0, $$
 
+$$ \nabla \cdot  \underline{u} = \underline{\underline{A}}, $$
+
 $$ \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} = 0, $$
 
 $$ Re\left( \frac{\partial u}{\partial t} + \frac{\partial u^2}{\partial x} + \frac{\partial (u v)}{\partial y} 
