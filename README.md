@@ -49,7 +49,7 @@ The kinetic and elastic potentials energies were calculated via
 
 
 $$ 
-	\[ \frac{\rho}{2 V} \right\int_V u \cdot u dV \]
+	\[ \frac{\rho}{2 V} \int_V u \cdot u dV \]
 $$
 
 and 
