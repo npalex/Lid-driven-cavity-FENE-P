@@ -32,7 +32,7 @@ $$ KE = \frac{\rho}{2 V} \int_V dV (u \cdot u) $$
 
 and 
 
-$$ PE = \frac{1}{2 V} \int_V dV tr(\tau_p)$$
+$$ PE = \frac{1}{2 V} \int_V dV tr(\tau_p) .$$
 
 ## **Numerical Scheme:**
 The cavity was discretized on a 51x51 cell grid.
