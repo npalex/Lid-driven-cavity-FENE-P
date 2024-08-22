@@ -33,7 +33,7 @@ The cavity was discretized on a 51x51 cell grid.
 The fluid velocity, stress tensor, conformation tensor, and pressure fields were set equal to zero at time $t = 0$, corresponding to a fluid at rest.
 The Lid velocity was defined according to the following ramp<sup>2</sup>
 
-$$u(t,x,y=1) = 8\left[1 + tanh\left(8\left(t-\frac{1}{2}\right)\right)\right]x^2(1-x^2), $$
+$$u(t,x,y=1) = 8\left[1 + tanh8\left(t-\frac{1}{2}\right)\right]x^2(1-x^2), $$
 
 which drives smooth start-up flow and causes the velocity gradient $\nabla u$ to vanish at the corners of the cavity. In addition, Nuemann boundary conditions were defined 
 at the cavity walls for the pressure, stress tensor, and the conformation tensor. 
