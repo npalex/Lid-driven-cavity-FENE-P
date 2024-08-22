@@ -6,7 +6,8 @@ $$ \nabla \cdot  **u** = 0, $$
 
 $$ \rho \left( \frac{\partial u}{\partial t} + u \cdot \nabla u \right) = -\nabla p + \nabla \cdot \tau_p + \eta_s \nabla^2 u, $$
 
-$$ \frac{\partial **\Theta** }{\partial t} + u \cdot \nabla \Theta - \left( \Omega \cdot \Theta - \Theta \cdot \Omega \right) -2B = \frac{1}{\lambda} \left( a \exp^{-\Theta}\right), $$
+$$ \frac{\partial **\Theta** }{\partial t} + u \cdot \nabla \Theta - \left( \Omega \cdot \Theta - \Theta \cdot \Omega \right) -2B 
+			= \frac{1}{\lambda} \left( a e^{-\Theta} - fI \right), $$
 	
 $$ Wi\frac{\partial \tau_{xx}}{\partial t} + \tau_{xx} = 2\frac{\partial u}{\partial x}, $$
 
