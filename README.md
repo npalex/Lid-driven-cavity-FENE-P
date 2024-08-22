@@ -39,9 +39,9 @@ which drives smooth start-up flow and causes the velocity gradient $\nabla u$ to
 at the cavity walls for the pressure, stress tensor, and the conformation tensor. 
 
 ## **Results**:
-All calculations were performed with a Reynolds number $Re = \frac{\rho U D}{\eta_s}$, Wiessenberg number $Wi = \frac{U \lambda}{L}$, 
-and viscosity ratio $\beta = \frac{\eta_s}{\eta_s + \eta_p}$ set equal to $Re = 0$, $Wi = 2$, $\beta = 0.5$, respectively.
+All calculations were performed with a Reynolds number $Re = \frac{\rho U D}{\eta_s}$, Wiessenberg number $Wi = \frac{U_{max} \lambda}{L}$, 
+and viscosity ratio $\beta = \frac{\eta_s}{\eta_s + \eta_p}$ set equal to $Re = 0$, $Wi = 2$, $\beta = 0.5$, respectively, where $U_max$ is the maximum lid speed and $D$ is the length of the cavity wall.
 
-### **Velocity and pressure distribution for $L = \infty$ (Oldroyd-B) over the time interval $[0, 20]$**
+### **Velocity and pressure fields for $L = \infty$ (Oldroyd-B) over the time interval $[0, 20]$**
 
 ![Fene-P_vary_L2](https://github.com/user-attachments/assets/fc54c1de-52ff-4131-95e5-bf193920e8a6)
