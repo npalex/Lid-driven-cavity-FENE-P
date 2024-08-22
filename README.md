@@ -1,25 +1,27 @@
 # **Lid-driven cavity flow of an incompressible FENE-P fluid**
 
-&emsp; This program solves the continuity, incompressible Cauchy momentum equations, and the log-conforation formulation of the FENE-P viscoelastic fluid model in 2D, given by
+&emsp; This program solves the continuity equation, the incompressible Cauchy momentum equation, and the log-conformation formulation of the FENE-P viscoelastic fluid model in 2D, given by
 
 $$ \nabla \cdot  **u** = 0, $$
 
 $$ \rho \left( \frac{\partial u}{\partial t} + u \cdot \nabla u \right) = -\nabla p + \nabla \cdot \tau_p + \eta_s \nabla^2 u, $$
 
+and 
+
 $$ \frac{\partial **\Theta** }{\partial t} + u \cdot \nabla \Theta - \left( \Omega \cdot \Theta - \Theta \cdot \Omega \right) -2B 
 			= \frac{1}{\lambda} \left( a e^{-\Theta} - fI \right), $$
-	
-$$ Wi\frac{\partial \tau_{xx}}{\partial t} + \tau_{xx} = 2\frac{\partial u}{\partial x}, $$
 
-$$  Wi\frac{\partial \tau_{xy}}{\partial t} + \tau_{xy} = \frac{\partial v}{\partial x} + \frac{\partial u}{\partial y}, $$
+respectively, where $a$ and the function $f$ and the polymeric stress tensor $\tau_p$ are defined acccording to
 
-and
+$$ a = \frac{L^2}{L^2 - 3)}, $$
 
-$$ Wi\frac{\partial \tau_{yy}}{\partial t} + \tau_{yy} = 2\frac{\partial v}{\partial y}. $$
+$$ f = \frac{L^2}{L^2 - tr(e^{\Theta})},$$
 
-where $u$ and $v$ are the components of the local fluid velocity in the $x$ and $y$ directions, $\tau_{xy}$ is the local "polymeric" shear stress, 
-and $\tau_{xx}$ and $\tau_{yy}$ are local, polymeric normal stresses.
+and 
 
+$$ \tau_p = \frac{\eta_p}{\lambda} \left( f e^{-\Theta} - aI \right)$$
+
+Here, $u$ is the local fluid velocity and $\Omega$ and $B$ are similar but not equal to the vorticity and shear rate tensors, respectively.
 
 
 
