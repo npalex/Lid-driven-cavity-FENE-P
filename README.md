@@ -23,23 +23,25 @@ and
 
 $$ \tau_p = \frac{\eta_p}{\lambda} \left( f e^{-\Theta} - aI \right) , $$
 
-where $\eta_s$, $\eta_p$, $\lambda$, and $L$ are, respectively, the solvent viscosity, the polymer contribution to the mixture viscosity, 
-the viscoelastic relaxation time, and the fully extended polymer legth.
+where $\rho$, $\eta_s$, $\eta_p$, $\lambda$, and $L$ are, respectively, the fluid density, the solvent viscosity, the polymer contribution to the mixture viscosity, 
+the viscoelastic relaxation time, and the fully extended polymer length.
 
 ## **Numerical Scheme:**
 The cavity was discretized on a 51x51 cell grid.
 
-### Boundary conditions:
-The Lid velocity was defined according to the following ramp, such that the velocity gradient $\nabla u$ vanishes at the corners.
+### Initial and boundary conditions:
+The fluid velocity, stress tensor, conformation tensor, and pressure fields were set equal to zero at time $t = 0$, corresponding to a fluid at rest.
+The Lid velocity was defined according to the following ramp<sup>2</sup>
 
-$$u(t,x,y=1) = 8\left[1 + tanh\left(8\left(t-\frac{1}{2}\right)\right)\right]x^2(1-x^2) $$  
+$$u(t,x,y=1) = 8\left[1 + tanh\left(8\left(t-\frac{1}{2}\right)\right)\right]x^2(1-x^2), $$
 
-8.0 * (1.0 + tanh( 8 * (t - 0.5) ) ) 
-//					 * 16.0
-                     * pow( x.component(0), 2.0 ) * pow( ( 1 - x.component(0) ), 2.0  )
+which drives smooth start-up flow and causes the velocity gradient $\nabla u$ to vanish at the corners of the cavity. In addition, Nuemann boundary conditions were defined 
+at the cavity walls for the pressure, stress tensor, and the conformation tensor. 
 
 ## **Results**:
+All calculations were performed with a Reynolds number $(Re = \frac{\rho U D}{\eta_s})$, Wiessenberg number $(Wi = \frac{U \lambda}{L})$, 
+and visocisty ratio (\beta = \frac{\eta_s}{eta_s + eta_p} set equal to $Re = 0$, $Wi = 2$, $\beta = 0.5$, respectively.
 
-### **Velocity and pressure distribution for $Re = 0$, $Wi = 2$, $\beta = 0.5$, and $L = \infty$ (Oldroyd-B) over the time interval $[0, 20]$**
+### **Velocity and pressure distribution for $L = \infty$ (Oldroyd-B) over the time interval $[0, 20]$**
 
 ![Fene-P_vary_L2](https://github.com/user-attachments/assets/fc54c1de-52ff-4131-95e5-bf193920e8a6)
