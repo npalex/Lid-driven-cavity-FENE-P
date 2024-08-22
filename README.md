@@ -4,8 +4,7 @@
 
 $$ \nabla \cdot  **u** = 0, $$
 
-$$ \rho \left( \frac{\partial u}{\partial t} + u \cdot \nabla u \right) = \frac{\partial \tau_{xx}}{\partial x} + \frac{\partial \tau_{xy}}{\partial y} 
-    + \beta \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} \right), $$
+$$ \rho \left( \frac{\partial u}{\partial t} + u \cdot \nabla u \right) = -\nabla p + \nabla \cdot \tau + \eta_s \nabla^2 u, $$
 
 	
 $$ Wi\frac{\partial \tau_{xx}}{\partial t} + \tau_{xx} = 2\frac{\partial u}{\partial x}, $$
