@@ -30,6 +30,6 @@ the viscoelastic relaxation time, and the fully extended polymer legth.
 
 ## **Results**:
 
-### **Velocity and pressure distribution for $Re = 0$, $Wi = 2$, $\beta = 0.5$, and $L = \inf$ (Oldroyd-B) over the time interval $[0, 20]$**
+### **Velocity and pressure distribution for $Re = 0$, $Wi = 2$, $\beta = 0.5$, and $L = \infinity$ (Oldroyd-B) over the time interval $[0, 20]$**
 
 ![Fene-P_vary_L2](https://github.com/user-attachments/assets/fc54c1de-52ff-4131-95e5-bf193920e8a6)
