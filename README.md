@@ -37,9 +37,13 @@ $$ PE = \frac{1}{2 V} \int_V dV tr(\tau_p) ,$$
 where $V$ is the volume of the cavity.
 
 ## **Numerical Scheme:**
-The cavity was discretized on a 51x51 cell grid.
+The rheoFOAM solver implementing the SIMPLE algorithm was used to evaluate the fluid velocity, conformation tensor, and pressure fields at each time step on a uniform 51x51 cell grid.
 
-Note, a mesh convergence study was not performed, so the 
+Gradient, divergence, and Laplacian terms were discretized using the Guass linear scheme, convection terms were discretized using the Cubista scheme,
+and time discretization was performed using a pure Crank-Nicolson scheme (see fvSchemes).
+
+fvSolutions:
+The pressure and velocity fields Generalized geometric-algebraic multi-grid (GAMG) solver for both the pressure and velocity fields with a DIC preconditioner and smoother.
 
 ### **Initial/boundary conditions:**
 The fluid velocity, stress tensor, log-conformation tensor, and pressure fields were set equal to zero at time $t = 0$, corresponding to a fluid at rest.
@@ -60,7 +64,7 @@ and viscosity ratio $\beta = \frac{\eta_s}{\eta_s + \eta_p}$ set equal to $Re = 
 
 ![Fene-P_vary_L2](https://github.com/user-attachments/assets/fc54c1de-52ff-4131-95e5-bf193920e8a6)
 
-These KE and PE transienst above indicate that the simulation reached steady-state for $L^2 = 5$ and $25$.
+These KE and PE transients above indicate that the simulation reached steady-state for $L^2 = 5$ and $25$.
 
 Note, a mesh convergence study was not performed, so the results above are only qualitative at best with unknown error.
 
