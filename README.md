@@ -13,13 +13,13 @@ $$ \frac{\partial **\Theta** }{\partial t} + u \cdot \nabla \Theta - \left( \Ome
 
 respectively, where $a$ and the function $f$ and the polymeric stress tensor $\tau_p$ are defined acccording to
 
-$$ a = \frac{L^2}{L^2 - 3)}, $$
+$$ a = \frac{L^2}{L^2 - 3}, $$
 
 $$ f = \frac{L^2}{L^2 - tr(e^{\Theta})},$$
 
 and 
 
-$$ \tau_p = \frac{\eta_p}{\lambda} \left( f e^{-\Theta} - aI \right)$$
+$$ \tau_p = \frac{\eta_p}{\lambda} \left( f e^{-\Theta} - aI \right) . $$
 
 Here, $u$ is the local fluid velocity and $\Omega$ and $B$ are similar but not equal to the vorticity and shear rate tensors, respectively.
 
