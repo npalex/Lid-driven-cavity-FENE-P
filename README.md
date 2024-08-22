@@ -27,6 +27,16 @@ where $\eta_s$, $\eta_p$, $\lambda$, and $L$ are, respectively, the solvent visc
 the viscoelastic relaxation time, and the fully extended polymer legth.
 
 ## **Numerical Scheme:**
+The cavity was discretized on a 51x51 cell grid.
+
+### Boundary conditions:
+The Lid velocity was defined according to the following ramp, such that the velocity gradient $\nabla u$ vanishes at the corners.
+
+$$u(x,y=1,t) = 8\left(1 + tanh(8\left(t-/frac{1}{2}\right))\right)x^2(1-x^2) $$  
+
+8.0 * (1.0 + tanh( 8 * (t - 0.5) ) ) 
+//					 * 16.0
+                     * pow( x.component(0), 2.0 ) * pow( ( 1 - x.component(0) ), 2.0  )
 
 ## **Results**:
 
