@@ -12,7 +12,7 @@ $$ \frac{\partial **\Theta** }{\partial t} + u \cdot \nabla \Theta - \left( \Ome
 			= \frac{1}{\lambda} \left( a e^{-\Theta} - fI \right). $$
 
 Here, $u$ is the local fluid velocity, $\Theta$ is the natural logarithm of the conformation tensor $C$, given by $\Theta = ln(C)$, $I$ is the identity tensor,
-$\Omega$ is a part of the velocity gradient tensor that describes pure rotation (similar to the vorticity tensor) and $B$ is symmetric and traceless (similar to the shear rate tensor).
+$\Omega$ is a part of the velocity gradient tensor ($\nabla u$) that describes pure rotation (similar to the vorticity tensor) and $B$ is symmetric and traceless (similar to the shear rate tensor).
 The parameter $a$, the function $f$, and the polymeric stress tensor $\tau_p$ are defined acccording to:
 
 $$ a = \frac{L^2}{L^2 - 3}, $$
@@ -32,10 +32,14 @@ $$ KE = \frac{\rho}{2 V} \int_V dV (u \cdot u) $$
 
 and 
 
-$$ PE = \frac{1}{2 V} \int_V dV tr(\tau_p) .$$
+$$ PE = \frac{1}{2 V} \int_V dV tr(\tau_p) ,$$
+
+where $V$ is the volume of the cavity.
 
 ## **Numerical Scheme:**
 The cavity was discretized on a 51x51 cell grid.
+
+Note, a mesh convergence study was not performed, so the 
 
 ### **Initial/boundary conditions:**
 The fluid velocity, stress tensor, log-conformation tensor, and pressure fields were set equal to zero at time $t = 0$, corresponding to a fluid at rest.
@@ -43,8 +47,8 @@ The lid velocity was defined according to the following ramp<sup>3</sup>
 
 $$u(t,x,y=1) = 8\left[1 + tanh8\left(t-\frac{1}{2}\right)\right]x^2(1-x^2), $$
 
-which drives smooth start-up flow and causes the velocity gradient $\nabla u$ to vanish at the corners of the cavity. In addition, homogeneous Nuemann boundary conditions were defined 
-at the cavity walls for the pressure, stress tensor, and the log-conformation tensor. 
+which drives smooth start-up flow and causes $\nabla u$ to vanish at the corners of the cavity. The fluid velocity was set equal to zero at the remaining walls. 
+In addition, homogeneous Nuemann boundary conditions were defined at the cavity walls for the pressure, stress tensor, and the log-conformation tensor. 
 
 ## **Results**:
 All calculations were performed with a Reynolds number $Re = \frac{\rho U_{max} D}{\eta_s}$, Wiessenberg number $Wi = \frac{U_{max} \lambda}{D}$, 
@@ -57,6 +61,8 @@ and viscosity ratio $\beta = \frac{\eta_s}{\eta_s + \eta_p}$ set equal to $Re = 
 ![Fene-P_vary_L2](https://github.com/user-attachments/assets/fc54c1de-52ff-4131-95e5-bf193920e8a6)
 
 These KE and PE transienst above indicate that the simulation reached steady-state for $L^2 = 5$ and $25$.
+
+Note, a mesh convergence study was not performed, so the results above are only qualitative at best with unknown error.
 
 ## **References**:
 
