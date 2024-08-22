@@ -9,7 +9,7 @@ $$ \rho \left( \frac{\partial u}{\partial t} + u \cdot \nabla u \right) = -\nabl
 and 
 
 $$ \frac{\partial **\Theta** }{\partial t} + u \cdot \nabla \Theta - \left( \Omega \cdot \Theta - \Theta \cdot \Omega \right) -2B 
-			= \frac{1}{\lambda} \left( a e^{-\Theta} - fI \right), $$
+			= \frac{1}{\lambda} \left( a e^{-\Theta} - fI \right). $$
 
 Here, $u$ is the local fluid velocity and $\Omega$ and $B$ are similar but not equal to the vorticity and shear rate tensors, respectively.
 The parameter $a$, the function $f$, and the polymeric stress tensor $\tau_p$ are defined acccording to:
