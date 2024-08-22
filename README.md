@@ -1,6 +1,6 @@
 # **Lid-driven cavity flow of an incompressible FENE-P fluid**
 
-&emsp; OpenFoam with RheoTool<sup>1</sup> is used here to solve the continuity equation, the incompressible Cauchy momentum equation, and the log-conformation formulation<sup>2,3</sup> of the FENE-P viscoelastic fluid model in 2D, given by
+&emsp; OpenFoam with RheoTool<sup>1</sup> was used to solve the continuity equation, the incompressible Cauchy momentum equation, and the log-conformation formulation<sup>2,3</sup> of the FENE-P viscoelastic fluid model in 2D, given by
 
 $$ \nabla \cdot  **u** = 0, $$
 
