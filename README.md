@@ -32,7 +32,7 @@ The cavity was discretized on a 51x51 cell grid.
 ### Boundary conditions:
 The Lid velocity was defined according to the following ramp, such that the velocity gradient $\nabla u$ vanishes at the corners.
 
-$$u(x,y=1,t) = 8\left(1 + tanh(8\left(t-/frac{1}{2}\right))\right)x^2(1-x^2) $$  
+$$u(t,x,y=1) = 8\left(1 + tanh(8\left(t-\frac{1}{2}\right))\right)x^2(1-x^2) $$  
 
 8.0 * (1.0 + tanh( 8 * (t - 0.5) ) ) 
 //					 * 16.0
