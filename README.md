@@ -11,7 +11,7 @@ and
 $$ \frac{\partial **\Theta** }{\partial t} + u \cdot \nabla \Theta - \left( \Omega \cdot \Theta - \Theta \cdot \Omega \right) -2B 
 			= \frac{1}{\lambda} \left( a e^{-\Theta} - fI \right). $$
 
-Here, $u$ is the local fluid velocity, $\Omega$ is a tensor that describes pure rotation (similar to the vorticity tensor) and $B$ is symmetric and tracless (similar to the shera rate tensor.
+Here, $u$ is the local fluid velocity, $\Omega$ is a tensor that describes pure rotation (similar to the vorticity tensor) and $B$ is symmetric and tracless (similar to the shear rate tensor).
 The parameter $a$, the function $f$, and the polymeric stress tensor $\tau_p$ are defined acccording to:
 
 $$ a = \frac{L^2}{L^2 - 3}, $$
