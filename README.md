@@ -45,14 +45,13 @@ and viscosity ratio $\beta = \frac{\eta_s}{\eta_s + \eta_p}$ set equal to $Re = 
 ### **Velocity and pressure fields for $L = \infty$ (Oldroyd-B) over the time interval $[0, 20]$**
 
 ### **Total kinetic and elastic potential energy as a function of time for $L^2 = 5, 25,$ and $\infty$**
-The kinetic and elastic potentials energies were calculated via
+The kinetic and elastic potentials energy densities were calculated via
 
-
-$$ \frac{\rho}{2 V} \int_V u \cdot u dV $$
+$$ KE = \frac{\rho}{2 V} \int_V u \cdot u dV $$
 
 and 
 
-$$ \frac{1}{2 V} \int_V tr(\tau_p)$$
+$$ PE = \frac{1}{2 V} \int_V tr(\tau_p)$$
 
 ![Fene-P_vary_L2](https://github.com/user-attachments/assets/fc54c1de-52ff-4131-95e5-bf193920e8a6)
 
