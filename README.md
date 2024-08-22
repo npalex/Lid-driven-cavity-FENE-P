@@ -29,7 +29,7 @@ the viscoelastic relaxation time, and the fully extended polymer length.
 ## **Numerical Scheme:**
 The cavity was discretized on a 51x51 cell grid.
 
-### Initial and boundary conditions:
+### **Initial/boundary conditions:**
 The fluid velocity, stress tensor, log-conformation tensor, and pressure fields were set equal to zero at time $t = 0$, corresponding to a fluid at rest.
 The lid velocity was defined according to the following ramp<sup>3</sup>
 
@@ -44,11 +44,12 @@ and viscosity ratio $\beta = \frac{\eta_s}{\eta_s + \eta_p}$ set equal to $Re = 
 
 ### **Velocity and pressure fields for $L = \infty$ (Oldroyd-B) over the time interval $[0, 20]$**
 
-### **Total kinetic and potential energy as a function of time for $L^2 = 5, 25, and \infty$**
+### **Total kinetic and potential energy as a function of time for $L^2 = 5, 25,$ and $\infty$**
+
 
 ![Fene-P_vary_L2](https://github.com/user-attachments/assets/fc54c1de-52ff-4131-95e5-bf193920e8a6)
 
-These results indicate the steady-state was achieved for $L^2 = 5$ and $25$
+These results indicate that the simulation reached steady-state for $L^2 = 5$ and $25$.
 ## **References**:
 
 1.	F. Pimenta and M.A. Alves, 2016. RheoTool version 6.0, https://github.com/fppimenta/rheoTool.
