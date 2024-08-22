@@ -48,11 +48,11 @@ and viscosity ratio $\beta = \frac{\eta_s}{\eta_s + \eta_p}$ set equal to $Re = 
 The kinetic and elastic potentials energies were calculated via
 
 $$
-\begin{document}
+\begin{}
 \[ 
 f=\int_0^t A d\tau =\rint_0^t A d\tau
 \]
-\end{document}
+\end{}
 $$
 
 $$ 
