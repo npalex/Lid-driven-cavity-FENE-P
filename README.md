@@ -22,8 +22,8 @@ and
 
 $$ \tau_p = \frac{\eta_p}{\lambda} \left( f e^{-\Theta} - aI \right) , $$
 
-where $\eta_s$, $\eta_p$, $\lambda$, and $L$ are the solvent viscosity, the polymer contribution the mixture viscosity, 
-the viscoelastic relaxation time, and the fully extended polymer legth, respectively. 
+where $\eta_s$, $\eta_p$, $\lambda$, and $L$ are, respectively, the solvent viscosity, the polymer contribution to the mixture viscosity, 
+the viscoelastic relaxation time, and the fully extended polymer legth.
 
 
 ![Fene-P_vary_L2](https://github.com/user-attachments/assets/fc54c1de-52ff-4131-95e5-bf193920e8a6)
