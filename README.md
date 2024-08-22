@@ -47,17 +47,10 @@ and viscosity ratio $\beta = \frac{\eta_s}{\eta_s + \eta_p}$ set equal to $Re = 
 ### **Total kinetic and elastic potential energy as a function of time for $L^2 = 5, 25,$ and $\infty$**
 The kinetic and elastic potentials energies were calculated via
 
-$$
-\begin{gather*}
-\[ 
-f=\int_0^t A d\tau =\rint_0^t A d\tau
-\]
-\end{gather*}
-$$
 
 $$ 
 	\[
-		\frac{\rho}{2 V} \int_V u \cdot u \,dV 
+		\frac{\rho}{2 V} \right\int_V u \cdot u dV 
 	\]
 $$
 
