@@ -48,13 +48,11 @@ and viscosity ratio $\beta = \frac{\eta_s}{\eta_s + \eta_p}$ set equal to $Re = 
 The kinetic and elastic potentials energies were calculated via
 
 
-$$ 
-	\[ \frac{\rho}{2 V} \int_V u \cdot u dV \]
-$$
+$$ \frac{\rho}{2 V} \int_V u \cdot u dV $$
 
 and 
 
-$$ \frac{1}{2 V}$$
+$$ \frac{1}{2 V} \int_V tr(\tau_p)$$
 
 ![Fene-P_vary_L2](https://github.com/user-attachments/assets/fc54c1de-52ff-4131-95e5-bf193920e8a6)
 
