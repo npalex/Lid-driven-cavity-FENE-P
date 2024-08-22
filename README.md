@@ -31,7 +31,7 @@ The cavity was discretized on a 51x51 cell grid.
 
 ### Initial and boundary conditions:
 The fluid velocity, stress tensor, conformation tensor, and pressure fields were set equal to zero at time $t = 0$, corresponding to a fluid at rest.
-The Lid velocity was defined according to the following ramp<sup>2</sup>
+The lid velocity was defined according to the following ramp<sup>2</sup>
 
 $$u(t,x,y=1) = 8\left[1 + tanh8\left(t-\frac{1}{2}\right)\right]x^2(1-x^2), $$
 
@@ -45,3 +45,25 @@ and viscosity ratio $\beta = \frac{\eta_s}{\eta_s + \eta_p}$ set equal to $Re = 
 ### **Velocity and pressure fields for $L = \infty$ (Oldroyd-B) over the time interval $[0, 20]$**
 
 ![Fene-P_vary_L2](https://github.com/user-attachments/assets/fc54c1de-52ff-4131-95e5-bf193920e8a6)
+
+
+## **References**:
+
+1.	L.Lee and R.J.LeVeque, 2003. An immersed interface method for incompressible Navier
+		Stokes equations. SIAM J. Sci. Comput., 25, 832–856.
+
+2.	Clawpack Development Team (2023), Clawpack Version 5.9.2,
+		http://www.clawpack.org, doi: 10.5281/zenodo.10076317
+
+3.	R. J. LeVeque, 1997. Wave propagation algorithms for multi-dimensional 
+		hyperbolic systems. J. Comput. Phys. 131, 327–353.
+
+4.	R. J. LeVeque. Finite Volume Methods for Hyperbolic Problems. Cambridge 
+		University Press, Cambridge, UK, 2002.
+
+
+@misc{rheoTool,
+ author = "F. Pimenta and M.A. Alves",
+ title = "rheoTool",
+ howpublished = "\url{https://github.com/fppimenta/rheoTool}",
+ year = "2016"}
