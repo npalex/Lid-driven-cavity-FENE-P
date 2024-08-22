@@ -26,6 +26,14 @@ $$ \tau_p = \frac{\eta_p}{\lambda} \left( f e^{-\Theta} - aI \right) , $$
 where $\rho$, $\eta_s$, $\eta_p$, $\lambda$, and $L$ are, respectively, the fluid density, the solvent viscosity, the polymer contribution to the mixture viscosity, 
 the viscoelastic relaxation time, and the fully extended polymer length.
 
+The kinetic (KE) and elastic potential (PE) energy densities were calculated via
+
+$$ KE = \frac{\rho}{2 V} \int_V dV (u \cdot u) $$
+
+and 
+
+$$ PE = \frac{1}{2 V} \int_V dV tr(\tau_p)$$
+
 ## **Numerical Scheme:**
 The cavity was discretized on a 51x51 cell grid.
 
@@ -45,17 +53,11 @@ and viscosity ratio $\beta = \frac{\eta_s}{\eta_s + \eta_p}$ set equal to $Re = 
 ### **Velocity and pressure fields for $L = \infty$ (Oldroyd-B) over the time interval $[0, 20]$**
 
 ### **Total kinetic and elastic potential energy as a function of time for $L^2 = 5, 25,$ and $\infty$**
-The kinetic (KE) and elastic potential (PE) energy densities were calculated via
-
-$$ KE = \frac{\rho}{2 V} \int_V dV (u \cdot u) $$
-
-and 
-
-$$ PE = \frac{1}{2 V} \int_V dV tr(\tau_p)$$
 
 ![Fene-P_vary_L2](https://github.com/user-attachments/assets/fc54c1de-52ff-4131-95e5-bf193920e8a6)
 
 These results indicate that the simulation reached steady-state for $L^2 = 5$ and $25$.
+
 ## **References**:
 
 1.	F. Pimenta and M.A. Alves, 2016. RheoTool version 6.0, https://github.com/fppimenta/rheoTool.
