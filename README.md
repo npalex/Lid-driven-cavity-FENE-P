@@ -38,12 +38,17 @@ where $V$ is the volume of the cavity.
 
 ## **Numerical Scheme:**
 The rheoFOAM solver implementing the SIMPLE algorithm was used to evaluate the fluid velocity, conformation tensor, and pressure fields at each time step on a uniform 51x51 cell grid.
+In addition, the improved both sides diffusion technique<sup>4</sup> was used to improve the numerical stability of the solver.
 
-Gradient, divergence, and Laplacian terms were discretized using the Guass linear scheme, convection terms were discretized using the Cubista scheme,
-and time discretization was performed using a pure Crank-Nicolson scheme (see fvSchemes).
+Gradient, divergence, and Laplacian terms were discretized using the Gauss linear scheme, convection terms were discretized using the CUBISTA scheme,
+and time discretization was performed using the Crank-Nicolson method.
 
-fvSolutions:
-The pressure and velocity fields Generalized geometric-algebraic multi-grid (GAMG) solver for both the pressure and velocity fields with a DIC preconditioner and smoother.
+The resulting discretized, linear systems of equations, of the form $Ax = b$, were solved using iterative solvers. The Generalized geometric-algebraic multi-grid (GAMG) solver was used for both the pressure and 
+velocity fields with a Diagonal-based Incomplete Cholesky (DIC) preconditioner in order to lower the condition number of the equation sets. For the conformation tensor the preconditioned 
+(bi-)conjugate gradient (PBiCG) method was used. The matrix $A$ for the corresponding system of equations is not symmetric positive definite. Hence, the Cholesky preconditioner could not be used and the
+Diagonal-based Incomplete LU (DILU) preconditioner, which is relatively slow, was used instead.
+
+Note, all calculations in this repo were performed using a single core.
 
 ### **Initial/boundary conditions:**
 The fluid velocity, stress tensor, log-conformation tensor, and pressure fields were set equal to zero at time $t = 0$, corresponding to a fluid at rest.
@@ -78,4 +83,6 @@ Note, a mesh convergence study was not performed, so the results above are only 
 3.	R. Fattala and R. Kupferman, 2005. Time-dependent simulation of viscoelastic flows at high Weissenberg
 		number using the log-conformation representation. J. Non-Newtonian Fluid Mech., 126, 23–37.
 
-4.	
+4.	 C. Fernandes, M.S.B. Araujo, L.L. Ferrás, J. Miguel Nóbrega, 2017, 
+		Improved both sides diffusion (iBSD): A new and straightforward stabilization approach for viscoelastic fluid flows
+		J. Non-Newtonian Fluid Mech., 249, 63-78.
