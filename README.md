@@ -56,7 +56,7 @@ The lid velocity was defined according to the following ramp<sup>3</sup>
 $$u(t,x,y=1) = 8\left[1 + tanh8\left(t-\frac{1}{2}\right)\right]x^2(1-x^2), $$
 
 which drives smooth start-up flow and causes $\nabla u$ to vanish at the corners of the cavity. The fluid velocity was set equal to zero at the remaining walls. 
-In addition, homogeneous Nuemann boundary conditions were defined at the cavity walls for the pressure and the log-conformation tensor.
+In addition, homogeneous Neumann boundary conditions were defined at the cavity walls for the pressure and the log-conformation tensor.
 
 ## **Results**:
 &emsp; All calculations were performed with a Reynolds number $Re = \frac{\rho U_{max} D}{\eta_s}$, Wiessenberg number $Wi = \frac{U_{max} \lambda}{D}$, 
