@@ -64,7 +64,7 @@ All calculations were performed with a Reynolds number $Re = \frac{\rho U_{max} 
 and viscosity ratio $\beta = \frac{\eta_s}{\eta_s + \eta_p}$ set equal to $Re = 0$, $Wi = 2$, $\beta = 0.5$, respectively, where $U_{max}$ is the maximum lid speed and $D$ is the length of the cavity wall.
 
 ### **Velocity and pressure fields for $L = \infty$ (Oldroyd-B) over the time interval $[0, 20]$**
-
+Streamlines_Re_0_Wi_2_beta_0_5_L2_inf
 ### **Total kinetic and elastic potential energy as a function of time for $L^2 = 5, 25,$ and $\infty$**
 
 ![Fene-P_vary_L2](https://github.com/user-attachments/assets/fc54c1de-52ff-4131-95e5-bf193920e8a6)
