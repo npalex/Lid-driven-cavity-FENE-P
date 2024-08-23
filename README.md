@@ -25,7 +25,7 @@ and
 $$ \tau_p = \frac{\eta_p}{\lambda} \left( f e^{-\Theta} - aI \right) , $$
 
 where $\rho$, $\eta_s$, $\eta_p$, and $\lambda$ are the fluid density, the solvent viscosity, and the polymer contribution to the mixture viscosity, 
-the viscoelastic relaxation time, respectively. The parameter $L$ is the finite extensibility parameter, defined as the ratio of the length of the fully extended polymer over the root mean
+the polymer relaxation time, respectively. The parameter $L$ is the finite extensibility parameter, defined as the ratio of the length of the fully extended polymer over the root mean
 square of the end-to-end separation distance of the polymer chain in its equilibrium configuration.
 
 &emsp; The kinetic (KE) and elastic potential (PE) energy densities were calculated via
@@ -79,6 +79,12 @@ https://github.com/user-attachments/assets/c8b9129f-c9bb-4a4d-8866-f42a561588d4
 ![Fene-P_vary_L2](https://github.com/user-attachments/assets/fc54c1de-52ff-4131-95e5-bf193920e8a6)
 
 The KE and PE transients above indicate that the simulation reached steady-state for $L^2 = 5$ and $25$.
+
+## **Discussion**:
+&emsp; The videos above indicate a Newtonian response at early times, with a centrally located primary vortex, followed by viscoelastic relaxation that drives the primary vortex to migrate upstream toward the upper left corner of the cavity.
+The finite extensibility constraint appears to reduce this effect. Using the FENE-P model equation an effective viscoelastic relaxation time can be defined according to : $\lambda_{eff} = \lambda(1-\frac{3}{L^2})$, indicating this parameter is reduced
+with decreasing $L$.  
+
 
 ## **References**:
 
