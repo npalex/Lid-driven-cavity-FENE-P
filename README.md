@@ -82,12 +82,6 @@ https://github.com/user-attachments/assets/c8b9129f-c9bb-4a4d-8866-f42a561588d4
 
 The KE and PE transients above indicate that the simulation reached steady-state for $L^2 = 5$ and $25$.
 
-Note, a mesh convergence study was not performed, so the results above are only qualitative at best with unknown error.
-
-## **Discussion**:
-
-
-
 ## **References**:
 
 1.	F. Pimenta and M.A. Alves, 2016. RheoTool version 6.0, https://github.com/fppimenta/rheoTool.
