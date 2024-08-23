@@ -1,0 +1,107 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Website:  https://openfoam.org                  |
+|   \\  /    A nd           | Version:  9                                     |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+    /*"(p|U)"
+    {        
+        solverType       eigenSolver; 
+         
+        solver           BiCGSTAB;     // Stabilized (bi-)conjugate gradient (BiCGSTAB), for both symmetric and asymmetric matrices 
+                  
+        saveSystem               true;
+        updatePrecondFrequency   -1;
+        updateMatrixCoeffs       true;
+        
+        tolerance        1e-12;
+        maxIter          1000;
+       
+        preconditioner
+        {
+            preconditioner       ILUT;
+            dropTol              1e-80;
+            fillFactor           200;
+        }       
+    }*/
+
+    "(U|p)"
+    {        
+        solver           GAMG;			// Generalized Algebraic Multi-Grid (GAMG) linear solver: generate a quick soln on course mesh and uses it as guess for finer mesh calculation 
+        smoother   		 DIC;			// Diagonal-based Incomplete Cholesky (DIC) method. Factor A in to A = L*L^T.
+        tolerance        1e-10;         // iterate until residual reached
+        relTol           0.; 
+    }
+	
+/*	"(p)"
+    {
+        solver           PCG;			//  Preconditioned conjugate gradient (PCG) solver. 
+        preconditioner   DIC;
+        tolerance        1e-10;
+        relTol           0.;
+        minIter          0;
+        maxIter          800;
+        
+    }*/
+
+    "(theta|tau)"
+    {
+
+        solver           PBiCG;			// preconditioned (bi-)conjugate gradient (PBiCG) method.
+        preconditioner
+        {
+            preconditioner DILU;		// Diagonal-based Incomplete LU method. factors A into A = L*U, replaces subnormal values with zeros.
+        }
+
+        tolerance         1e-10;		// iterate until residual reached
+        relTol            0;
+        minIter           0;
+        maxIter           1000;
+    }
+ 
+}
+
+ 
+
+SIMPLE
+{
+    nInIter         2;
+    nNonOrthogonalCorrectors 0;
+    pRefCell        0;
+    pRefValue       0;
+//	consistent		yes; // added 7-12-24
+
+    residualControl
+    {
+		
+
+    }
+}
+
+relaxationFactors
+{
+     fields
+      {       
+         p 1;
+      }
+
+     equations
+      { 
+         U 1;
+         tau 1;
+         theta 1;
+      }
+}
+
+// ************************************************************************* //
