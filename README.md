@@ -45,8 +45,8 @@ convection terms were discretized using the CUBISTA scheme, and time discretizat
 
 &emsp; In accordance with the SIMPLE algorithm, the velocity, pressure, and conformation tensor equations above were solved separately. The corresponding discretized linear systems of equations of the form $Ax = b$ for each variable $u$, $p$, and $\Theta$, were solved using iterative linear solvers.
 The Generalized geometric-algebraic multi-grid (GAMG) solver was used for both the pressure and velocity fields with a Diagonal-based Incomplete Cholesky (DIC) preconditioner, 
-which requires the matrix $A$ to be symmetric positive definite matrix (SPD). Note, the convective term in the momentum equation has been neglected corresponding to $Re = 0$, so that the matrix $A$ for the discretized momentum equation is SPD. The matrix $A$ for the Laplacian equation governing the pressure is also SPD. For the conformation tensor, the preconditioned (bi-)conjugate gradient (PBiCG) method was used. 
-However, the matrix $A$ for the FENE-P model governing $\Theta$ is not SPD since the advective terms remain. Hence, the Cholesky decomposition could not be used and the Diagonal-based Incomplete LU (DILU) preconditioner, which is relatively slow (Cholesky decomposition is approximately twice as efficient), was used instead. 
+which requires the matrix $A$ to be symmetric positive definite (SPD). Note, the convective term in the momentum equation has been neglected, since $Re = 0$, so that the matrix $A$ for the discretized momentum equation is SPD. The matrix $A$ for the Laplacian equation governing the pressure is also SPD. For $\Theta$, the preconditioned (bi-)conjugate gradient (PBiCG) method was used. 
+However, the matrix $A$ for the FENE-P model governing $\Theta$ is not SPD since the advective terms remain. Hence, Cholesky decomposition could not be used and the Diagonal-based Incomplete LU (DILU) preconditioner, which is relatively slow (Cholesky decomposition is approximately twice as efficient as LU decomposition), was used instead. 
 Note, all calculations were performed using a single core.
 
 ### **Initial/boundary conditions:**
