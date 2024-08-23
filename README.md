@@ -1,6 +1,6 @@
 # **Lid-driven cavity flow of an incompressible FENE-P fluid**
 
-&emsp; OpenFoam with RheoTool<sup>1</sup> was used to solve the continuity equation, the incompressible Cauchy momentum equation, and the log-conformation formulation<sup>2,3</sup> of the FENE-P viscoelastic fluid model in 2D, given by
+&emsp; OpenFoam with RheoTool<sup>1</sup> was used to solve the continuity equation, the incompressible Cauchy momentum equation, and the log-conformation formulation<sup>2,3</sup> of the FENE-P (Finitely-Extensible Nonlinear Elastic) viscoelastic fluid model in 2D, given by
 
 $$ \nabla \cdot  **u** = 0, $$
 
@@ -23,8 +23,9 @@ and
 
 $$ \tau_p = \frac{\eta_p}{\lambda} \left( f e^{-\Theta} - aI \right) , $$
 
-where $\rho$, $\eta_s$, $\eta_p$, $\lambda$, and $L$ are, respectively, the fluid density, the solvent viscosity, the polymer contribution to the mixture viscosity, 
-the viscoelastic relaxation time, and the fully extended polymer length.
+where $\rho$, $\eta_s$, $\eta_p$, and $\lambda$ are, respectively, the fluid density, the solvent viscosity, the polymer contribution to the mixture viscosity, 
+the viscoelastic relaxation time. The parameter $L$ is the finite extensibility parameter, defined as the ratio of the length of the fully extended polymer over the root mean
+square of the end-to-end separation distance of the polymer chain in its equilibrium configuration.
 
 The kinetic (KE) and elastic potential (PE) energy densities were calculated via
 
@@ -82,6 +83,10 @@ https://github.com/user-attachments/assets/c8b9129f-c9bb-4a4d-8866-f42a561588d4
 These KE and PE transients above indicate that the simulation reached steady-state for $L^2 = 5$ and $25$.
 
 Note, a mesh convergence study was not performed, so the results above are only qualitative at best with unknown error.
+
+## **Discussion**:
+
+
 
 ## **References**:
 
