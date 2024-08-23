@@ -23,8 +23,8 @@ and
 
 $$ \tau_p = \frac{\eta_p}{\lambda} \left( f e^{-\Theta} - aI \right) , $$
 
-where $\rho$, $\eta_s$, $\eta_p$, and $\lambda$ are, respectively, the fluid density, the solvent viscosity, the polymer contribution to the mixture viscosity, 
-the viscoelastic relaxation time. The parameter $L$ is the finite extensibility parameter, defined as the ratio of the length of the fully extended polymer over the root mean
+where $\rho$, $\eta_s$, $\eta_p$, and $\lambda$ are the fluid density, the solvent viscosity, and the polymer contribution to the mixture viscosity, 
+the viscoelastic relaxation time, respectively. The parameter $L$ is the finite extensibility parameter, defined as the ratio of the length of the fully extended polymer over the root mean
 square of the end-to-end separation distance of the polymer chain in its equilibrium configuration.
 
 The kinetic (KE) and elastic potential (PE) energy densities were calculated via
