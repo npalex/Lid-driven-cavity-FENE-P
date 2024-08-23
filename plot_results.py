@@ -98,52 +98,6 @@ dy = dx
 x = np.arange(xlow + dx/2, 1, dx)
 y = np.arange(ylow + dy/2, 1, dy)
 xgrid, ygrid = np.meshgrid(x, y)
-
-#-- establish figure and axes objects
-# fig = plt.figure(figsize = (7, 6), layout = "tight")
-# ax = fig.gca()
-
-# ax.axis('square')
-# p = ax.pcolormesh(xgrid, ygrid, q[2,0,:,:], cmap = 'coolwarm',vmin = -10, vmax = 10)
-# cbar = fig.colorbar(p, fraction = 0.045, pad = 0.05, ticks = np.arange(-10, 12, 2))
-# cbar.set_label('$p/(\u03C1 U^2)$', size = 20)
-
-#------------------------------------------------
-#-- plot vector field and pressure distribution
-#------------------------------------------------
-#-- define function, which is an argument for the method animation.FuncAnimation() and is called for each frame
-# def fplot(frame_number):
-    
-    # ax.clear()
-    
-    # #-- plot pressure distribution
-    # ax.pcolormesh(xgrid, ygrid, q[2,frame_number,:,:], cmap = 'coolwarm',vmin =-10, vmax = 10) #--cmap = 'GnBu'
-    
-    # #-- plot velocity distribution
-    # ax.quiver(x[::q_step], y[::q_step], q[0,frame_number,::q_step,::q_step], q[1,frame_number,::q_step,::q_step], scale_units = 'xy', scale = 1)
-
-    # #-- set axes title
-    # ax.set_title('t(U/L) = %.2f' %t[frame_number], fontsize = 20)
-    
-    # #-- set axes limits and tick marks
-    # ax.set_xticks(np.arange(0, 1.2, .2))
-    # ax.set_yticks(np.arange(0, 1.2, .2))
-    # ax.set_xlim(left = 0, right = 1.)
-    # ax.set_ylim(bottom = 0, top = 1.)
-    
-    # ax.set_ylabel('$y$', fontsize = 16)
-    # ax.set_xlabel('$x$', fontsize = 16)
-    
-    # return()
-
-# #-- generate animation
-# anim = animation.FuncAnimation(fig = fig, func = fplot, frames=int(steps+1), interval=40, repeat=False)
-# plt.close()                        #-- removes residual plot at final time
-# #HTML(anim.to_jshtml())             #-- print animation in jupyter notebook
-
-# #-- save animation as an html file
-# with open("Vector_field_Re_0_1_Wi_2.html", "w") as f:
-    # print(anim.to_html5_video(embed_limit=None), file=f)
     
 #------------------------------------------------
 #-- plot streamlines and pressure field
@@ -191,51 +145,3 @@ plt.close()                        #-- removes residual plot at final time
 #-- save animation as an html file
 with open("Streamlines_Re_0_1_Wi_2.html", "w") as f:
     print(anim.to_html5_video(embed_limit=None), file=f)
-    
-    
-#------------------------------------------------
-#-- plot streamlines and normal stress tau_xx field
-#------------------------------------------------
-# fig = plt.figure(figsize = (7.5, 6), layout = "tight")
-# ax = plt.axes(xlim=(-0.02, 1.02), ylim=(-0.02, 1.1))            # creates axes at specifed limits, (gca() not required)
-# q_step = 1                           # quiver plot spacing
-
-# #-- generate colorbar
-# ax.axis('square')
-# p = ax.pcolormesh(xgrid, ygrid, q[2,0,:,:], cmap = 'coolwarm',vmin =-0.5, vmax = 0.5)
-# cbar = fig.colorbar(p, fraction = 0.045, pad = 0.05, ticks = np.arange(-0.5, 0.6, .1))
-# cbar.set_label('$\u03C4_{xx}/(\u03B7 U/L)$', size = 20) 
-
-# #-- define function, which is an argument for the method animation.FuncAnimation() and is called for each frame
-# def fplot(frame_number):
-    
-    # ax.clear()
-    
-    # #-- plot tau_xx distribution
-    # ax.pcolormesh(xgrid, ygrid, q[3,frame_number,:,:], cmap = 'coolwarm',vmin =-.5, vmax = .5)
-    
-    # #-- plot velocity distribution
-    # ax.streamplot(xgrid, ygrid, q[0,frame_number,::q_step,::q_step], q[1,frame_number,::q_step,::q_step], color = "black", linewidth = .3, density=.7, broken_streamlines=False)  
-
-    # #-- set axes title
-    # ax.set_title('t(U/L) = %.2f' %t[frame_number], fontsize = 20)
-    
-    # #-- set axex limits and tick marks
-    # ax.set_xticks(np.arange(0, 1.2, .2))
-    # ax.set_yticks(np.arange(0, 1.2, .2))
-    # ax.set_xlim(left = 0, right = 1.)
-    # ax.set_ylim(bottom = 0, top = 1.)
-    
-    # ax.set_ylabel('$y$', fontsize = 16)
-    # ax.set_xlabel('$x$', fontsize = 16)
-    
-    # return()
-
-# #-- generate animation
-# anim = animation.FuncAnimation(fig = fig, func = fplot, frames=int(steps+1), interval=40, repeat=False)
-# plt.close()                        #-- removes residual plot at final time
-# #HTML(anim.to_jshtml())             #-- print animation in jupyter notebook
-
-# #-- save animation as an html file
-# with open("Streamlines_tau_xx_Re_0_1_Wi_2.html", "w") as f:
-    # print(anim.to_html5_video(embed_limit=None), file=f)
