@@ -1,6 +1,7 @@
 # **Lid-driven cavity flow of an incompressible FENE-P fluid**
 
-&emsp; OpenFoam with RheoTool<sup>1</sup> was used to solve the continuity equation, the incompressible Cauchy momentum equation, and the log-conformation formulation<sup>2,3</sup> of the FENE-P (Finitely-Extensible Nonlinear Elastic) viscoelastic fluid model in 2D, given by
+&emsp; OpenFoam with RheoTool<sup>1</sup> was used to solve the continuity equation, the Cauchy momentum equation, and the log-conformation formulation<sup>2,3</sup> 
+of the FENE-P (Finitely-Extensible Nonlinear Elastic) viscoelastic fluid model in 2D, given by
 
 $$ \nabla \cdot  **u** = 0, $$
 
@@ -39,13 +40,14 @@ where $V$ is the volume of the cavity.
 
 ## **Numerical Scheme:**
 &emsp; The rheoFOAM solver implementing the SIMPLE algorithm was used to evaluate the fluid velocity, conformation tensor, and pressure fields at each time step on a uniform 51x51 cell grid.
-In addition, the improved both sides diffusion technique<sup>4</sup> was used to improve the numerical stability of the solver. Gradient, divergence, and Laplacian terms were discretized using the Gauss linear scheme, convection terms were discretized using the CUBISTA scheme,
-and time discretization was performed using the Crank-Nicolson method.
+In addition, the improved both sides diffusion technique<sup>4</sup> was used to improve the numerical stability of the solver. Gradient, divergence, and Laplacian terms were discretized using the Gauss linear scheme, 
+convection terms were discretized using the CUBISTA scheme, and time discretization was performed using the Crank-Nicolson method. 
 
-&emsp; The resulting discretized, linear systems of equations, of the form $Ax = b$, were solved using iterative solvers. The Generalized geometric-algebraic multi-grid (GAMG) solver was used for both the pressure and 
-velocity fields with a Diagonal-based Incomplete Cholesky (DIC) preconditioner in order to lower the condition number of the equation sets. For the conformation tensor the preconditioned 
-(bi-)conjugate gradient (PBiCG) method was used. The matrix $A$ for the corresponding system of equations is not symmetric positive definite. Hence, the Cholesky preconditioner could not be used and the
-Diagonal-based Incomplete LU (DILU) preconditioner, which is relatively slow, was used instead. Note, all calculations in this repo were performed using a single core.
+&emsp; In accordance with the SIMPLE algorithm, the velocity, pressure, and conformation tensor equations are solved separately and the corresponding discretized, linear systems of equations of the form $Ax = b$ for each variable $u$, $p$, and $\Theta$, were solved using iterative linear solvers.
+The Generalized geometric-algebraic multi-grid (GAMG) solver was used for both the pressure and velocity fields with a Diagonal-based Incomplete Cholesky (DIC) preconditioner, 
+which requires a symmetric positive definite matrix (SPD) $A$. Note, the convective term in the momentum equation has been neglected corresponding to $Re = 0$, so that matrix $A$ for the discretized momentum equation is SPD. The matrix $A$ for the Laplacian equationn governing the pressure is also SPD. For the conformation tensor, the preconditioned (bi-)conjugate gradient (PBiCG) method was used. 
+However, the matrix $A$ for the FENE-P model governing $\Theta$ is not SPD since the advective terms remain. Hence, the Cholesky decomposition could not be used and the Diagonal-based Incomplete LU (DILU) preconditioner, which is relatively slow (Cholesky decomposition is approximately twice as efficient), was used instead. 
+Note, all calculations in this repo were performed using a single core.
 
 ### **Initial/boundary conditions:**
 &emsp; The fluid velocity, log-conformation tensor, and pressure fields were set equal to zero at time $t = 0$, corresponding to a fluid at rest.
@@ -54,7 +56,7 @@ The lid velocity was defined according to the following ramp<sup>3</sup>
 $$u(t,x,y=1) = 8\left[1 + tanh8\left(t-\frac{1}{2}\right)\right]x^2(1-x^2), $$
 
 which drives smooth start-up flow and causes $\nabla u$ to vanish at the corners of the cavity. The fluid velocity was set equal to zero at the remaining walls. 
-In addition, homogeneous Nuemann boundary conditions were defined at the cavity walls for the pressure and the log-conformation tensor. 
+In addition, homogeneous Nuemann boundary conditions were defined at the cavity walls for the pressure and the log-conformation tensor.
 
 ## **Results**:
 &emsp; All calculations were performed with a Reynolds number $Re = \frac{\rho U_{max} D}{\eta_s}$, Wiessenberg number $Wi = \frac{U_{max} \lambda}{D}$, 
