@@ -39,9 +39,7 @@ where $V$ is the volume of the cavity.
 
 ## **Numerical Scheme:**
 &emsp; The rheoFOAM solver implementing the SIMPLE algorithm was used to evaluate the fluid velocity, conformation tensor, and pressure fields at each time step on a uniform 51x51 cell grid.
-In addition, the improved both sides diffusion technique<sup>4</sup> was used to improve the numerical stability of the solver.
-
-&emsp; Gradient, divergence, and Laplacian terms were discretized using the Gauss linear scheme, convection terms were discretized using the CUBISTA scheme,
+In addition, the improved both sides diffusion technique<sup>4</sup> was used to improve the numerical stability of the solver. Gradient, divergence, and Laplacian terms were discretized using the Gauss linear scheme, convection terms were discretized using the CUBISTA scheme,
 and time discretization was performed using the Crank-Nicolson method.
 
 &emsp; The resulting discretized, linear systems of equations, of the form $Ax = b$, were solved using iterative solvers. The Generalized geometric-algebraic multi-grid (GAMG) solver was used for both the pressure and 
