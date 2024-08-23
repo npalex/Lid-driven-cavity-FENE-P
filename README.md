@@ -76,11 +76,11 @@ https://github.com/user-attachments/assets/de4676a0-70c1-47bf-8194-d53354d0617a
 
 https://github.com/user-attachments/assets/c8b9129f-c9bb-4a4d-8866-f42a561588d4
 
-### **Total kinetic and elastic potential energy as a function of time for $L^2 = 5, 25,$ and $\infty$**
+### **Total kinetic and elastic potential energy densities as a function of time for $L^2 = 5, 25,$ and $\infty$**
 
 ![Fene-P_vary_L2](https://github.com/user-attachments/assets/fc54c1de-52ff-4131-95e5-bf193920e8a6)
 
-These KE and PE transients above indicate that the simulation reached steady-state for $L^2 = 5$ and $25$.
+The KE and PE transients above indicate that the simulation reached steady-state for $L^2 = 5$ and $25$.
 
 Note, a mesh convergence study was not performed, so the results above are only qualitative at best with unknown error.
 
