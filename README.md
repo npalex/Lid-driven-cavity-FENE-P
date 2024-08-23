@@ -82,8 +82,10 @@ The KE and PE transients above indicate that the simulation reached steady-state
 
 ## **Discussion**:
 &emsp; The videos above indicate a Newtonian response at early times, with a centrally located primary vortex, followed by viscoelastic relaxation that drives the primary vortex to migrate upstream toward the upper left corner of the cavity.
-The finite extensibility constraint appears to reduce this effect. Using the FENE-P model equation an effective viscoelastic relaxation time can be defined according to : $\lambda_{eff} = \lambda(1-\frac{3}{L^2})$, indicating this parameter is reduced
-with decreasing $L$, which is consistent with the energy density figure above.  
+The finite extensibility constraint appears to reduce this effect. Using the FENE-P model equation, an effective viscoelastic relaxation time can be defined according to : $\lambda_{eff} = \lambda(1-\frac{3}{L^2})$, indicating $\lambda_{eff}$ is reduced
+with decreasing $L$, which is consistent with the energy density figure above. All calculations were performed at $Wi = 2$, which may not be sufficient to observe sigficant finite extensibility effects, such as shear thinning, 
+as indicated by the steady shear curves presented in Yamani and McKinley.<sup>5</sup>
+presented in 
 
 
 ## **References**:
@@ -96,6 +98,8 @@ with decreasing $L$, which is consistent with the energy density figure above.
 3.	R. Fattala and R. Kupferman, 2005. Time-dependent simulation of viscoelastic flows at high Weissenberg
 		number using the log-conformation representation. J. Non-Newtonian Fluid Mech., 126, 23–37.
 
-4.	 C. Fernandes, M.S.B. Araujo, L.L. Ferrás, J. Miguel Nóbrega, 2017, 
+4.	C. Fernandes, M.S.B. Araujo, L.L. Ferrás, J. Miguel Nóbrega, 2017, 
 		Improved both sides diffusion (iBSD): A new and straightforward stabilization approach for viscoelastic fluid flows
 		J. Non-Newtonian Fluid Mech., 249, 63-78.
+
+5.	S. Yamani, G. H. McKinley, 2023. Master Curves for FENE-P Fluids in Steady Shear Flow. J. Non-Newtonian Fluid Mech., 313, 104944.
