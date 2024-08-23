@@ -63,9 +63,17 @@ In addition, homogeneous Nuemann boundary conditions were defined at the cavity 
 All calculations were performed with a Reynolds number $Re = \frac{\rho U_{max} D}{\eta_s}$, Wiessenberg number $Wi = \frac{U_{max} \lambda}{D}$, 
 and viscosity ratio $\beta = \frac{\eta_s}{\eta_s + \eta_p}$ set equal to $Re = 0$, $Wi = 2$, $\beta = 0.5$, respectively, where $U_{max}$ is the maximum lid speed and $D$ is the length of the cavity wall.
 
-### **Velocity and pressure fields for $L = \infty$ (Oldroyd-B) over the time interval $[0, 20]$**
+### **Velocity and pressure fields for $L = \infty$ (Oldroyd-B) over the time interval $[0, 10]$**
 
 https://github.com/user-attachments/assets/af22151e-9a1c-48f7-a741-729721fc70dc
+
+### **Velocity and pressure fields for $L = 25$ over the time interval $[0, 10]$**
+
+https://github.com/user-attachments/assets/de4676a0-70c1-47bf-8194-d53354d0617a
+
+### **Velocity and pressure fields for $L = 5$ over the time interval $[0, 10]$**
+
+https://github.com/user-attachments/assets/c8b9129f-c9bb-4a4d-8866-f42a561588d4
 
 ### **Total kinetic and elastic potential energy as a function of time for $L^2 = 5, 25,$ and $\infty$**
 
