@@ -27,7 +27,7 @@ where $\rho$, $\eta_s$, $\eta_p$, and $\lambda$ are the fluid density, the solve
 the viscoelastic relaxation time, respectively. The parameter $L$ is the finite extensibility parameter, defined as the ratio of the length of the fully extended polymer over the root mean
 square of the end-to-end separation distance of the polymer chain in its equilibrium configuration.
 
-The kinetic (KE) and elastic potential (PE) energy densities were calculated via
+&emsp; The kinetic (KE) and elastic potential (PE) energy densities were calculated via
 
 $$ KE = \frac{\rho}{2 V} \int_V dV (u \cdot u) $$
 
@@ -38,21 +38,19 @@ $$ PE = \frac{1}{2 V} \int_V dV tr(\tau_p) ,$$
 where $V$ is the volume of the cavity.
 
 ## **Numerical Scheme:**
-The rheoFOAM solver implementing the SIMPLE algorithm was used to evaluate the fluid velocity, conformation tensor, and pressure fields at each time step on a uniform 51x51 cell grid.
+&emsp; The rheoFOAM solver implementing the SIMPLE algorithm was used to evaluate the fluid velocity, conformation tensor, and pressure fields at each time step on a uniform 51x51 cell grid.
 In addition, the improved both sides diffusion technique<sup>4</sup> was used to improve the numerical stability of the solver.
 
-Gradient, divergence, and Laplacian terms were discretized using the Gauss linear scheme, convection terms were discretized using the CUBISTA scheme,
+&emsp; Gradient, divergence, and Laplacian terms were discretized using the Gauss linear scheme, convection terms were discretized using the CUBISTA scheme,
 and time discretization was performed using the Crank-Nicolson method.
 
-The resulting discretized, linear systems of equations, of the form $Ax = b$, were solved using iterative solvers. The Generalized geometric-algebraic multi-grid (GAMG) solver was used for both the pressure and 
+&emsp; The resulting discretized, linear systems of equations, of the form $Ax = b$, were solved using iterative solvers. The Generalized geometric-algebraic multi-grid (GAMG) solver was used for both the pressure and 
 velocity fields with a Diagonal-based Incomplete Cholesky (DIC) preconditioner in order to lower the condition number of the equation sets. For the conformation tensor the preconditioned 
 (bi-)conjugate gradient (PBiCG) method was used. The matrix $A$ for the corresponding system of equations is not symmetric positive definite. Hence, the Cholesky preconditioner could not be used and the
-Diagonal-based Incomplete LU (DILU) preconditioner, which is relatively slow, was used instead.
-
-Note, all calculations in this repo were performed using a single core.
+Diagonal-based Incomplete LU (DILU) preconditioner, which is relatively slow, was used instead. Note, all calculations in this repo were performed using a single core.
 
 ### **Initial/boundary conditions:**
-The fluid velocity, log-conformation tensor, and pressure fields were set equal to zero at time $t = 0$, corresponding to a fluid at rest.
+&emsp; The fluid velocity, log-conformation tensor, and pressure fields were set equal to zero at time $t = 0$, corresponding to a fluid at rest.
 The lid velocity was defined according to the following ramp<sup>3</sup>
 
 $$u(t,x,y=1) = 8\left[1 + tanh8\left(t-\frac{1}{2}\right)\right]x^2(1-x^2), $$
@@ -61,7 +59,7 @@ which drives smooth start-up flow and causes $\nabla u$ to vanish at the corners
 In addition, homogeneous Nuemann boundary conditions were defined at the cavity walls for the pressure and the log-conformation tensor. 
 
 ## **Results**:
-All calculations were performed with a Reynolds number $Re = \frac{\rho U_{max} D}{\eta_s}$, Wiessenberg number $Wi = \frac{U_{max} \lambda}{D}$, 
+&emsp; All calculations were performed with a Reynolds number $Re = \frac{\rho U_{max} D}{\eta_s}$, Wiessenberg number $Wi = \frac{U_{max} \lambda}{D}$, 
 and viscosity ratio $\beta = \frac{\eta_s}{\eta_s + \eta_p}$ set equal to $Re = 0$, $Wi = 2$, $\beta = 0.5$, respectively, where $U_{max}$ is the maximum lid speed and $D$ is the length of the cavity wall.
 
 ### **Velocity and pressure fields for $L = \infty$ (Oldroyd-B) over the time interval $[0, 10]$**
