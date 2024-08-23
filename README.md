@@ -82,11 +82,9 @@ The KE and PE transients above indicate that the simulation reached steady-state
 
 ## **Discussion**:
 &emsp; The videos above indicate a Newtonian response at early times, with a centrally located primary vortex, followed by viscoelastic relaxation that drives the primary vortex to migrate upstream toward the upper left corner of the cavity.
-The finite extensibility constraint appears to reduce this effect. Using the FENE-P model equation, an effective viscoelastic relaxation time can be defined according to : $\lambda_{eff} = \lambda(1-\frac{3}{L^2})$, indicating $\lambda_{eff}$ is reduced
-with decreasing $L$, which is consistent with the energy density figure above. All calculations were performed at $Wi = 2$, which may not be sufficient to observe sigficant finite extensibility effects, such as shear thinning, 
+Finite extensibility under the conditions presented here, appears to reduce this effect as well as the effective viscoelastic relaxation time. Using the FENE-P model equation above, an effective viscoelastic relaxation time can be defined according to: $\lambda_{eff} = \lambda(1-\frac{3}{L^2})$, indicating $\lambda_{eff}$ is reduced
+with decreasing $L$, which is consistent with the energy density figure above. Note, all calculations were performed with $Wi = 2$, which may be insufficient to observe significant finite extensibility effects , such as shear-thinning, 
 as indicated by the steady shear curves presented in Yamani and McKinley.<sup>5</sup>
-presented in 
-
 
 ## **References**:
 
