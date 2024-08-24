@@ -82,9 +82,7 @@ The KE and PE transients above indicate that the simulation reached steady-state
 
 ## **Discussion**:
 &emsp; The videos above indicate a Newtonian response at early times, with a centrally located primary vortex, followed by viscoelastic relaxation that drives the primary vortex to migrate upstream toward the upper left corner of the cavity.
-Finite extensibility under the conditions presented here, appears to reduce this effect as well as the effective viscoelastic relaxation time.
-
-This behavior can be understood by reformulating the FENE-P model in terms of the polymeric stress tensor $\tau_p$:
+Finite extensibility under the conditions presented here, appears to reduce this effect as well as the effective viscoelastic relaxation time. This behavior can be understood by reformulating the FENE-P model in terms of the polymeric stress tensor $\tau_p$:
 
 $$ \tau_p + \lambda_{eff} \tau_{p_{(1)}}
 			= \eta_{p,eff} \left(\nabla u + \nabla u^T \right). $$ 
