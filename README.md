@@ -81,7 +81,7 @@ https://github.com/user-attachments/assets/c8b9129f-c9bb-4a4d-8866-f42a561588d4
 The KE and PE transients above indicate that the simulation reached steady-state for $L^2 = 5$ and $25$.
 
 ## **Discussion**:
-&emsp; The videos above indicate a Newtonian response at early times, with a centrally located primary vortex, followed by viscoelastic relaxation that drives primary vortex migration upstream toward the upper left corner of the cavity.
+&emsp; The videos above indicate a Newtonian response at early times, with a centrally located primary vortex, followed by viscoelastic relaxation that drives the primary vortex to migrate upstream toward the upper left corner of the cavity.
 Finite extensibility under the conditions presented here, appears to reduce this effect as well as the effective viscoelastic relaxation time. which is consistent with the energy density figure above.
 
 This behavior can be understood by refomrulating the FENE-P model in terms of the polymeric stress tensor $\tau_p$:
