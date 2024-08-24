@@ -82,14 +82,14 @@ The KE and PE transients above indicate that the simulation reached steady-state
 
 ## **Discussion**:
 &emsp; The videos above indicate a Newtonian response at early times, with a centrally located primary vortex, followed by viscoelastic relaxation that drives the primary vortex to migrate upstream toward the upper left corner of the cavity.
-Finite extensibility under the conditions presented here, appears to reduce this effect as well as the effective viscoelastic relaxation time. which is consistent with the energy density figure above.
+Finite extensibility under the conditions presented here, appears to reduce this effect as well as the effective viscoelastic relaxation time.
 
-This behavior can be understood by refomrulating the FENE-P model in terms of the polymeric stress tensor $\tau_p$:
+This behavior can be understood by reformulating the FENE-P model in terms of the polymeric stress tensor $\tau_p$:
 
 $$ \tau_p + \lambda_{eff} \tau_{p_{(1)}}
 			= \eta_{p,eff} \left(\nabla u + \nabla u^T \right). $$ 
 			
-where $\tau_{p_{(1)}}$ denotes the upper convected derivative of $/tau_p$, the effective viscoelastic relaxation time is
+where $\tau_{p_{(1)}}$ denotes the upper convected derivative of $\tau_p$. Here, the effective viscoelastic relaxation time is given by
 
 $$ \lambda_{eff} = \frac{\lambda}{f_2} ,$$
 
@@ -103,8 +103,8 @@ $$ f_2 = \frac{L^2 + \frac{\lambda}{a \eta_p} tr(\tau_p)}{L^2-3} .$$
 
 $\lambda_{eff}$ decreases with decreasing $L$ indicating that finite extensibility reduces the effective viscoelastic relaxation time of the fluid, which is consistent with the energy density curves above. 
 
-Furthermore, shear-thinning occurs when $\eta_{p,eff}$ decreases with an increase in the local, stored elastic potential energy ($tr(\tau_p)$) 
-as polymers are stretched under flow. Note, however, that all calculations were performed with $Wi = 2$, which may be insufficient to observe significant shear-thinning induced by finite extensibility, 
+Furthermore, shear-thinning occurs when $\eta_{p,eff}$ decreases with an increase in the local, stored elastic potential energy density $tr(\tau_p)$ 
+as the polymers are stretched under flow. Note, however, that all calculations were performed with $Wi = 2$, which may be insufficient to observe significant shear-thinning induced by finite extensibility, 
 as indicated by the steady shear curves presented in Yamani and McKinley.<sup>5</sup>
 
 ## **References**:
