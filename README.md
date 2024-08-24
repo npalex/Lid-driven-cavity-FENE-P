@@ -88,12 +88,13 @@ as indicated by the steady shear curves presented in Yamani and McKinley.<sup>5<
 
 The FENE-P model reformulated in terms of the polymeric stress tensor $\tau_p$ is given by
 
-$$ $$ \tau_p + \lambda_eff(\tau_P)_(1) 
+$$ \tau_p + \lambda_eff(\tau_P)_(1) 
 			= \eta_{p,eff} \left(\nabla u + \nabla u^T \right). $$ 
 			
 where 
 
 $$ \lambda_eff = \frac{\lambda}{f_2} ,$$
+
 $$ \eta_{p,eff} = \frac{\lambda \eta_p}{f2} ,$$
  
 and 
