@@ -67,11 +67,11 @@ and viscosity ratio $\beta = \frac{\eta_s}{\eta_s + \eta_p}$ set equal to $Re = 
 
 https://github.com/user-attachments/assets/af22151e-9a1c-48f7-a741-729721fc70dc
 
-### **Velocity and pressure fields for $L = 25$ over the time interval $[0, 10]$**
+### **Velocity and pressure fields for $L^2 = 25$ over the time interval $[0, 10]$**
 
 https://github.com/user-attachments/assets/de4676a0-70c1-47bf-8194-d53354d0617a
 
-### **Velocity and pressure fields for $L = 5$ over the time interval $[0, 5]$**
+### **Velocity and pressure fields for $L^2 = 5$ over the time interval $[0, 5]$**
 
 https://github.com/user-attachments/assets/c8b9129f-c9bb-4a4d-8866-f42a561588d4
 
