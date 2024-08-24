@@ -86,6 +86,19 @@ Finite extensibility under the conditions presented here, appears to reduce this
 with decreasing $L$, which is consistent with the energy density figure above. Note, all calculations were performed with $Wi = 2$, which may be insufficient to observe significant finite extensibility effects , such as shear-thinning, 
 as indicated by the steady shear curves presented in Yamani and McKinley.<sup>5</sup>
 
+The FENE-P model reformulated in terms of the polymeric stress tensor $\tau_p$ is given by
+
+$$ $$ \tau_p + \lambda_eff(\tau_P)_(1) 
+			= \eta_{p,eff} \left(\nabla u + \nabla u^T \right). $$ 
+			
+where 
+
+$$ \lambda_eff = \frac{\lambda}{f_2} ,$$
+$$ \eta_{p,eff} = \frac{\lambda \eta_p}{f2} ,$$
+ 
+and 
+ 
+ $$ $$
 ## **References**:
 
 1.	F. Pimenta and M.A. Alves, 2016. RheoTool version 6.0, https://github.com/fppimenta/rheoTool.
