@@ -13,7 +13,7 @@ $$ \frac{\partial **\Theta** }{\partial t} + u \cdot \nabla \Theta - \left( \Ome
 			= \frac{1}{\lambda} \left( a e^{-\Theta} - fI \right). $$
 
 Here, $u$ is the local fluid velocity, $\Theta$ is the natural logarithm of the conformation tensor $C$, given by $\Theta = ln(C)$, and $I$ is the identity tensor.
-The velocity gradient tensor was decomposed according to: $\nabla u = \Omega + B + N \cdot C^{-1}$ where $\Omega$ and $N$ are antisymmetric and describe pure rotational deformation (with the former similar to the vorticity tensor) 
+The velocity gradient tensor was decomposed according to: $\nabla u = \Omega + B + N \cdot C^{-1}$ where $\Omega$ and $N$ are antisymmetric tensors that describe pure rotational deformation (with the former similar to the vorticity tensor) 
 and $B$ is symmetric, traceless, and describes volume-preserving deformation (similar to the shear rate tensor).<sup>2</sup>
 The parameter $a$, the function $f$, and the polymeric stress tensor $\tau_p$ are defined acccording to:
 
