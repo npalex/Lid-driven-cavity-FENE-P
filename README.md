@@ -91,15 +91,21 @@ The FENE-P model reformulated in terms of the polymeric stress tensor $\tau_p$ i
 $$ \tau_p + \lambda_{eff} \tau_{p_{(1)}}
 			= \eta_{p,eff} \left(\nabla u + \nabla u^T \right). $$ 
 			
-where 
+where the effective viscoelastic relaxation time is
 
 $$ \lambda_eff = \frac{\lambda}{f_2} ,$$
 
-$$ \eta_{p,eff} = \frac{\lambda \eta_p}{f2} ,$$
+the effective polymeric viscosity is
+
+$$ \eta_{p,eff} = \frac{\lambda \eta_p}{f_2} ,$$
  
-and 
+the function $f_2$ is defined according to
  
- $$ $$
+$$ f_2 = \frac{L^2 + \frac{\lambda}{a \eta_p} tr(\tau_p)}{L^2-3} ,$$
+
+and $\tau_{p_{(1)}}$ denotes the upper convected derivative of $tau_p$.
+
+
 ## **References**:
 
 1.	F. Pimenta and M.A. Alves, 2016. RheoTool version 6.0, https://github.com/fppimenta/rheoTool.
