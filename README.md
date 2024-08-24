@@ -39,11 +39,11 @@ $$ PE = \frac{1}{2 V} \int_V dV tr(\tau_p) ,$$
 where $V$ is the volume of the cavity.
 
 ## **Numerical Scheme:**
-&emsp; The rheoFOAM solver implementing the SIMPLE algorithm was used to evaluate the fluid velocity, conformation tensor, and pressure fields at each time step on a uniform 51x51 cell grid.
+&emsp; The rheoFOAM solver implementing the SIMPLE algorithm was used to evaluate the fluid velocity, log-conformation tensor, and pressure fields at each time step on a uniform 51x51 cell grid.
 In addition, the improved both sides diffusion technique<sup>4</sup> was used to improve the numerical stability of the solver. Gradient, divergence, and Laplacian terms were discretized using the Gauss linear scheme, 
 convection terms were discretized using the CUBISTA scheme, and time discretization was performed using the Crank-Nicolson method. 
 
-&emsp; In accordance with the SIMPLE algorithm, the velocity, pressure, and conformation tensor equations above were solved separately. The corresponding discretized linear systems of equations of the form $Ax = b$ for each variable $u$, $p$, and $\Theta$, were solved using iterative linear solvers.
+&emsp; In accordance with the SIMPLE algorithm, the velocity, pressure, and log-conformation tensor equations above were solved separately. The corresponding discretized linear systems of equations of the form $Ax = b$ for each variable $u$, $p$, and $\Theta$, were solved using iterative linear solvers.
 The Generalized geometric-algebraic multi-grid (GAMG) solver was used for both the pressure and velocity fields with a Diagonal-based Incomplete Cholesky (DIC) preconditioner, 
 which requires the matrix $A$ to be symmetric positive definite (SPD). Note, the convective term in the momentum equation has been neglected, since $Re = 0$, so that the matrix $A$ for the discretized momentum equation is SPD. The matrix $A$ for the Laplacian equation governing the pressure is also SPD. For $\Theta$, the preconditioned (bi-)conjugate gradient (PBiCG) method was used. 
 However, the matrix $A$ for the FENE-P model governing $\Theta$ is not SPD since the advective terms remain. Hence, Cholesky decomposition could not be used and the Diagonal-based Incomplete LU (DILU) preconditioner, which is relatively slow (Cholesky decomposition is approximately twice as efficient as LU decomposition), was used instead. 
