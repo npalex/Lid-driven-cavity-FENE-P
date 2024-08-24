@@ -93,17 +93,17 @@ $$ \tau_p + \lambda_{eff} \tau_{p_{(1)}}
 			
 where the effective viscoelastic relaxation time is
 
-$$ \lambda_eff = \frac{\lambda}{f_2} ,$$
+$$ \lambda_{eff} = \frac{\lambda}{f_2} ,$$
 
 the effective polymeric viscosity is
 
-$$ \eta_{p,eff} = \frac{\lambda \eta_p}{f_2} ,$$
+$$ \eta_{p,eff} = \frac{a \eta_p}{f_2} ,$$
  
 the function $f_2$ is defined according to
  
 $$ f_2 = \frac{L^2 + \frac{\lambda}{a \eta_p} tr(\tau_p)}{L^2-3} ,$$
 
-and $\tau_{p_{(1)}}$ denotes the upper convected derivative of $tau_p$.
+and $\tau_{p_{(1)}}$ denotes the upper convected derivative of $/tau_p$.
 
 
 ## **References**:
