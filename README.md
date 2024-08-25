@@ -102,7 +102,7 @@ $$ f_2 = \frac{L^2 + \frac{\lambda}{a \eta_p} tr(\tau_p)}{L^2-3} .$$
 
 $\lambda_{eff}$ decreases with decreasing $L$ indicating that finite extensibility reduces the effective viscoelastic relaxation time of the fluid, which is consistent with the video simulations and the energy density curves above. 
 
-&emsp; Furthermore, shear-thinning occurs when $\eta_{p,eff}$ decreases with an increase in the local, stored elastic potential energy density $tr(\tau_p)$ 
+&emsp; Furthermore, shear-thinning occurs when $\eta_{p,eff}$ decreases with an increase in the local elastic potential energy density $tr(\tau_p)$ 
 as the polymers are stretched under flow, an effect that is more pronounced as $L$ decreases. Note, however, that all calculations were performed with $Wi = 2$, which may be insufficient to observe significant shear-thinning behavior induced by finite extensibility, 
 as indicated by the steady shear curves presented in Yamani and McKinley.<sup>5</sup>
 
